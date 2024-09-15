@@ -1,0 +1,907 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "1b727352",
+   "metadata": {},
+   "source": [
+    "Programming Basics in Python Questions\n",
+    "\n",
+    "1. Create a matrix with three rows A, B and C and four columns with names Q, W, E and R. Fill the matrix with any numbers between 1 and 10.\n",
+    "2. x = 24, y =”Hello World”, z = 93.65.\n",
+    "Identify the class of x, y and z and convert all three into factor.\n",
+    "3. q = 65.9836\n",
+    "a. Find square root of q and round it up to 3 digits.\n",
+    "b. Check if log to the base 10 of q is less than 2.\n",
+    "4. x = c(“Intelligence”, “Knowledge”, “Wisdom”, “Comprehension”) \n",
+    "y = “I am”\n",
+    "z = “intelligent”\n",
+    "a. Find first 4 letters of each word in x.\n",
+    "b. Combine y and z to form a sentence “I am intelligent”\n",
+    "c. Convert all the words in x to upper case.\n",
+    "5. a = c(3,4,14,17,3,98,66,85,44)\n",
+    "Print “Yes” if the numbers in ‘a’ are divisible by 3 and “No” if they are not divisible by 3 using ifelse().\n",
+    "6. b = c(36,3,5,19,2,16,18,41,35,28,30,31)\n",
+    "List all the numbers less than 30 in b using for loop.\n",
+    "7. Date = “01/30/18”\n",
+    "a) Convert Date into standard date format (yyyy-mm-dd) and name it as Date_new.\n",
+    "b) Extract day of week and month from Date_new.\n",
+    "c) Find the difference in the current system date and Date_new."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "0191b540",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#Create a matrix with three rows A, B and C and four columns with names Q, W, E and R. \n",
+    "#Fill the matrix with any numbers between 1 and 10\n",
+    "\n",
+    "import numpy as np"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "id": "1864e5ed",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([[1, 2, 3],\n",
+       "       [4, 5, 6],\n",
+       "       [7, 8, 9],\n",
+       "       [3, 6, 9]])"
+      ]
+     },
+     "execution_count": 10,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "mat1 = np.array([[1,2,3], [4,5,6], [7,8,9], [3,6,9]])\n",
+    "mat1"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "id": "cbf2fd3e",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Naming and Renaming of Rows and Columns in Python\n",
+    "\n",
+    "import pandas as pd\n",
+    "import numpy as np"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "6a4bc896",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([1, 2, 3, 4, 5, 6, 7, 8, 9, 3, 6, 9])"
+      ]
+     },
+     "execution_count": 5,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "mat1 = np.array([1,2,3,4,5,6,7,8,9,3,6,9])\n",
+    "mat1"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "fe69fbb9",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "c2d6ddbe",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([[1, 2, 3],\n",
+       "       [4, 5, 6],\n",
+       "       [7, 8, 9],\n",
+       "       [3, 6, 9]])"
+      ]
+     },
+     "execution_count": 7,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "mat1 = np.array([[1,2,3], [4,5,6], [7,8,9], [3,6,9]])\n",
+    "mat1"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "id": "ff8d41d8",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<div>\n",
+       "<style scoped>\n",
+       "    .dataframe tbody tr th:only-of-type {\n",
+       "        vertical-align: middle;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe tbody tr th {\n",
+       "        vertical-align: top;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead th {\n",
+       "        text-align: right;\n",
+       "    }\n",
+       "</style>\n",
+       "<table border=\"1\" class=\"dataframe\">\n",
+       "  <thead>\n",
+       "    <tr style=\"text-align: right;\">\n",
+       "      <th></th>\n",
+       "      <th>A</th>\n",
+       "      <th>B</th>\n",
+       "      <th>C</th>\n",
+       "    </tr>\n",
+       "  </thead>\n",
+       "  <tbody>\n",
+       "    <tr>\n",
+       "      <th>Q</th>\n",
+       "      <td>1</td>\n",
+       "      <td>2</td>\n",
+       "      <td>3</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>W</th>\n",
+       "      <td>4</td>\n",
+       "      <td>5</td>\n",
+       "      <td>6</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>E</th>\n",
+       "      <td>7</td>\n",
+       "      <td>8</td>\n",
+       "      <td>9</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>R</th>\n",
+       "      <td>3</td>\n",
+       "      <td>6</td>\n",
+       "      <td>9</td>\n",
+       "    </tr>\n",
+       "  </tbody>\n",
+       "</table>\n",
+       "</div>"
+      ],
+      "text/plain": [
+       "   A  B  C\n",
+       "Q  1  2  3\n",
+       "W  4  5  6\n",
+       "E  7  8  9\n",
+       "R  3  6  9"
+      ]
+     },
+     "execution_count": 9,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "mat1 = pd.DataFrame(np.array([[1,2,3], [4,5,6], [7,8,9], [3,6,9]]), index=[\"Q\",\"W\",\"E\",\"R\"], columns=[\"A\",\"B\",\"C\"])\n",
+    "mat1"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "id": "9746a62e",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([[1, 2, 3, 4],\n",
+       "       [5, 6, 7, 8],\n",
+       "       [9, 3, 6, 9]])"
+      ]
+     },
+     "execution_count": 10,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "mat2 = np.array([1,2,3,4,5,6,7,8,9,3,6,9]).reshape(3,4)\n",
+    "mat2"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "id": "4c007088",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<div>\n",
+       "<style scoped>\n",
+       "    .dataframe tbody tr th:only-of-type {\n",
+       "        vertical-align: middle;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe tbody tr th {\n",
+       "        vertical-align: top;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead th {\n",
+       "        text-align: right;\n",
+       "    }\n",
+       "</style>\n",
+       "<table border=\"1\" class=\"dataframe\">\n",
+       "  <thead>\n",
+       "    <tr style=\"text-align: right;\">\n",
+       "      <th></th>\n",
+       "      <th>Q</th>\n",
+       "      <th>W</th>\n",
+       "      <th>E</th>\n",
+       "      <th>R</th>\n",
+       "    </tr>\n",
+       "  </thead>\n",
+       "  <tbody>\n",
+       "    <tr>\n",
+       "      <th>A</th>\n",
+       "      <td>1</td>\n",
+       "      <td>2</td>\n",
+       "      <td>3</td>\n",
+       "      <td>4</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>B</th>\n",
+       "      <td>5</td>\n",
+       "      <td>6</td>\n",
+       "      <td>7</td>\n",
+       "      <td>8</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>C</th>\n",
+       "      <td>9</td>\n",
+       "      <td>3</td>\n",
+       "      <td>6</td>\n",
+       "      <td>9</td>\n",
+       "    </tr>\n",
+       "  </tbody>\n",
+       "</table>\n",
+       "</div>"
+      ],
+      "text/plain": [
+       "   Q  W  E  R\n",
+       "A  1  2  3  4\n",
+       "B  5  6  7  8\n",
+       "C  9  3  6  9"
+      ]
+     },
+     "execution_count": 11,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "mat2 = pd.DataFrame(np.array([1,2,3,4,5,6,7,8,9,3,6,9]).reshape(3,4), index=[\"A\",\"B\",\"C\"], columns=[\"Q\",\"W\",\"E\",\"R\"])\n",
+    "mat2"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 23,
+   "id": "86a86e6b",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "int"
+      ]
+     },
+     "execution_count": 23,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Question 2 \n",
+    "# x = 24, y =”Hello World”, z = 93.65. Identify the class of x, y and z and convert all three into factor.\n",
+    "\n",
+    "x = 24\n",
+    "type(x)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 24,
+   "id": "70278ee5",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "str"
+      ]
+     },
+     "execution_count": 24,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "y = \"Hello World\"\n",
+    "type(y)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 25,
+   "id": "49761fc8",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "float"
+      ]
+     },
+     "execution_count": 25,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "z = 93.65\n",
+    "type(z)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 26,
+   "id": "c6128523",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<div>\n",
+       "<style scoped>\n",
+       "    .dataframe tbody tr th:only-of-type {\n",
+       "        vertical-align: middle;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe tbody tr th {\n",
+       "        vertical-align: top;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead th {\n",
+       "        text-align: right;\n",
+       "    }\n",
+       "</style>\n",
+       "<table border=\"1\" class=\"dataframe\">\n",
+       "  <thead>\n",
+       "    <tr style=\"text-align: right;\">\n",
+       "      <th></th>\n",
+       "      <th>x</th>\n",
+       "      <th>y</th>\n",
+       "      <th>z</th>\n",
+       "    </tr>\n",
+       "  </thead>\n",
+       "  <tbody>\n",
+       "    <tr>\n",
+       "      <th>0</th>\n",
+       "      <td>24</td>\n",
+       "      <td>Hello World</td>\n",
+       "      <td>93.65</td>\n",
+       "    </tr>\n",
+       "  </tbody>\n",
+       "</table>\n",
+       "</div>"
+      ],
+      "text/plain": [
+       "    x            y      z\n",
+       "0  24  Hello World  93.65"
+      ]
+     },
+     "execution_count": 26,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Creating vectors of x,y,z\n",
+    "data = {'x':[24], 'y':[\"Hello World\"], 'z':[93.65]}\n",
+    "df = pd.DataFrame(data)\n",
+    "df"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "71ebae71",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Question 3\n",
+    "# q = 65.9836 a. Find square root of q and round it up to 3 digits. b. Check if log to the base 10 of q is less than 2."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "id": "e4d4d652",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "8.123028991700078"
+      ]
+     },
+     "execution_count": 18,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "q = 65.9836\n",
+    "\n",
+    "import math\n",
+    "math.sqrt(65.9836)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 30,
+   "id": "a4bd1255",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "8.123"
+      ]
+     },
+     "execution_count": 30,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "round(8.123028991700078,3)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 36,
+   "id": "717282f0",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "1.819436006533418"
+      ]
+     },
+     "execution_count": 36,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "math.log10(65.9836)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 37,
+   "id": "2b654a3a",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "True"
+      ]
+     },
+     "execution_count": 37,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "math.log10(65.9836) < 2"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 40,
+   "id": "cdc2cdd7",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "1.819436006533418"
+      ]
+     },
+     "execution_count": 40,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "np.log10(65.9836)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 41,
+   "id": "9b5a25f7",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "True"
+      ]
+     },
+     "execution_count": 41,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "math.log10(65.9836) < 2"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "48a00b1a",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Question 4\n",
+    "# x = c(“Intelligence”, “Knowledge”, “Wisdom”, “Comprehension”) \n",
+    "y = “I am”\n",
+    "z = “intelligent”\n",
+    "a. Find first 4 letters of each word in x.\n",
+    "b. Combine y and z to form a sentence “I am intelligent”\n",
+    "c. Convert all the words in x to upper case."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 44,
+   "id": "653773fd",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['Inte', 'Know', 'Wisd', 'Comp']"
+      ]
+     },
+     "execution_count": 44,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# a. Find first 4 letters of each word in x.\n",
+    "x = [\"Intelligence\", \"Knowledge\", \"Wisdom\", \"Comprehension\"]\n",
+    "x = [word.replace(word,word[0:4]) for word in x]\n",
+    "x"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 31,
+   "id": "a0f8307c",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'I am Intelligent'"
+      ]
+     },
+     "execution_count": 31,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# b. Combine y and z to form a sentence “I am intelligent”\n",
+    "y = \"I am\"\n",
+    "z = \"Intelligent\"\n",
+    "y+\" \"+z\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 45,
+   "id": "563bcf7f",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['INTELLIGENCE', 'KNOWLEDGE', 'WISDOM', 'COMPREHENSION']"
+      ]
+     },
+     "execution_count": 45,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# c. Convert all the words in x to upper case.\n",
+    "[x.upper() for x in [\"Intelligence\", \"Knowledge\", \"Wisdom\", \"Comprehension\"]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 56,
+   "id": "a8fb902d",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "['Yes', 'No', 'No', 'No', 'Yes', 'No', 'Yes', 'No', 'No']\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 5. a = c(3,4,14,17,3,98,66,85,44)\n",
+    "# Print “Yes” if the numbers in ‘a’ are divisible by 3 and “No” if they are not divisible by 3 using ifelse().\n",
+    "\n",
+    "a = [3,4,14,17,3,98,66,85,44]\n",
+    "result = [\"Yes\" if num % 3 == 0 else \"No\" for num in a]\n",
+    "print(result)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 62,
+   "id": "86372cee",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "3\n",
+      "5\n",
+      "19\n",
+      "2\n",
+      "16\n",
+      "18\n",
+      "28\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 6. b = c(36,3,5,19,2,16,18,41,35,28,30,31)\n",
+    "# List all the numbers less than 30 in b using for loop.\n",
+    "\n",
+    "b = [36, 3, 5, 19, 2, 16, 18, 41, 35, 28, 30, 31]\n",
+    "\n",
+    "for num in b:\n",
+    "    if num < 30:\n",
+    "        print(num)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "cf5177ed",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 7. Date = “01/30/18”\n",
+    "# a) Convert Date into standard date format (yyyy-mm-dd) and name it as Date_new.\n",
+    "# b) Extract day of week and month from Date_new.\n",
+    "# c) Find the difference in the current system date and Date_new.\n",
+    "\n",
+    "from datetime import datetime, timedelta"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 76,
+   "id": "4a84343a",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'2018-01-30'"
+      ]
+     },
+     "execution_count": 76,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Date = “01/30/18”\n",
+    "# a) Convert Date into standard date format (yyyy-mm-dd) and name it as Date_new.\n",
+    "date_str = \"01/30/18\"\n",
+    "date_object = datetime.strptime(date_str, \"%m/%d/%y\")\n",
+    "Date_new = date_object.strftime(\"%Y-%m-%d\")\n",
+    "Date_new"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 83,
+   "id": "5a4da835",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'January'"
+      ]
+     },
+     "execution_count": 83,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# b) Extract day of month from Date_new.\n",
+    "month = date_object.strftime(\"%B\")\n",
+    "month"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 84,
+   "id": "9a223ab6",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'Tuesday'"
+      ]
+     },
+     "execution_count": 84,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# b) Extract day of week from Date_new\n",
+    "day_of_week = date_object.strftime(\"%A\")\n",
+    "day_of_week"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 86,
+   "id": "f7d0f434",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "datetime.timedelta(days=2156, seconds=42234, microseconds=477820)"
+      ]
+     },
+     "execution_count": 86,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# c) Find the difference in the current system date and Date_new\n",
+    "current_date = datetime.now()\n",
+    "date_difference = current_date - date_object\n",
+    "date_difference"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 72,
+   "id": "7d9f3ec9",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "a) Date_new: 2018-01-30\n",
+      "b) Day of the week: Tuesday\n",
+      "   Month: January\n",
+      "c) Difference in days: 2156\n"
+     ]
+    }
+   ],
+   "source": [
+    "from datetime import datetime, timedelta\n",
+    "\n",
+    "# a) Convert Date into standard date format (yyyy-mm-dd)\n",
+    "date_str = \"01/30/18\"\n",
+    "date_object = datetime.strptime(date_str, \"%m/%d/%y\")\n",
+    "Date_new = date_object.strftime(\"%Y-%m-%d\")\n",
+    "\n",
+    "# b) Extract day of the week and month from Date_new\n",
+    "day_of_week = date_object.strftime(\"%A\")\n",
+    "month = date_object.strftime(\"%B\")\n",
+    "\n",
+    "# c) Find the difference in the current system date and Date_new\n",
+    "current_date = datetime.now()\n",
+    "date_difference = current_date - date_object\n",
+    "\n",
+    "# Print the results\n",
+    "print(\"a) Date_new:\", Date_new)\n",
+    "print(\"b) Day of the week:\", day_of_week)\n",
+    "print(\"   Month:\", month)\n",
+    "print(\"c) Difference in days:\", date_difference.days)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "6ef5a7fb",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.11.5"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
