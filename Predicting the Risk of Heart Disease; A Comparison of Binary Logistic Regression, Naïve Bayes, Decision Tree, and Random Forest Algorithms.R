@@ -1,6 +1,5 @@
 # Project Title: 
-# Predicting the Risk of Heart Disease; A Comparison of Binary Logistic Regression, Naïve Bayes, 
-# Decision Tree, and Random Forest Algorithms
+# Predicting the Risk of Heart Disease; A Comparison of Binary Logistic Regression, Naïve Bayes, Decision Tree, and Random Forest
 
 # Importing Libraries
 library(dplyr)  # for data manipulation
